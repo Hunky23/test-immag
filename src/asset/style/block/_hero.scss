@@ -1,0 +1,288 @@
+.hero {
+  margin-bottom: 60px;
+
+  &__container {
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__slide-text {
+    top: 14%;
+    left: 180px;
+    position: absolute;
+  }
+
+  &__slide-title {
+    font-size: 56px;
+    font-weight: 900;
+    max-width: 800px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__slide-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 500px;
+    display: block;
+  }
+
+  &__request-call {
+    top: 56%;
+    left: 180px;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+
+    svg {
+      width: 76px;
+      height: 76px;
+      fill: none;
+
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+
+    span {
+      color: #FFB100;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__slider-navigation {
+    left: 180px;
+    bottom: 9%;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+  }
+
+  &__button-prev {
+    cursor: pointer;
+
+    svg {
+      width: 64px;
+      height: 64px;
+      fill: transparent;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__button-next {
+    cursor: pointer;
+
+    svg {
+      width: 64px;
+      height: 64px;
+      fill: transparent;
+    }
+  }
+  
+  @media (max-width: 1800px) {
+    &__slide-text {
+      left: 100px;
+      max-width: 600px;
+    }
+
+    &__slide-title {
+      font-size: 45px;
+    }
+
+    &__slide-subtitle {
+      font-size: 16px;
+    }
+
+    &__request-call {
+      left: 100px;
+
+      svg {
+        width: 60px;
+        height: 60px;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    &__slider-navigation {
+      left: 100px;
+    }
+
+    &__button-prev {
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &__button-next {
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__slide-text {
+      left: 50px;
+      max-width: 500px;
+    }
+
+    &__slide-title {
+      font-size: 35px;
+    }
+
+    &__slide-subtitle {
+      font-size: 14px;
+      max-width: 400px;
+    }
+
+    &__request-call {
+      left: 50px;
+
+      svg {
+        width: 50px;
+        height: 50px;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__slider-navigation {
+      left: 50px;
+    }
+
+    &__button-prev {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__button-next {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__slide-text {
+      left: 20px;
+      max-width: 400px;
+    }
+
+    &__slide-title {
+      font-size: 25px;
+    }
+
+    &__slide-subtitle {
+      max-width: 300px;
+    }
+
+    &__request-call {
+      left: 20px;
+
+      svg {
+        width: 40px;
+        height: 40px;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    &__slider-navigation {
+      left: 20px;
+    }
+
+    &__button-prev {
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__button-next {
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+
+    &__slide-title {
+      font-size: 20px;
+      max-width: 300px;
+    }
+
+    &__slide-subtitle {
+      display: none;
+    }
+
+    &__request-call {
+      top: 45%;
+    }
+  }
+  
+  @media (max-width: 530px) {
+    &__slide-title {
+      display: none;
+    }
+
+    &__request-call {
+      top: 20%;
+    }
+  }
+}

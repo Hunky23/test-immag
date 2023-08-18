@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="asset/style/style.min.css">
+    <title>Главная</title>
+</head>
+<body>
+<svg class="hidden">
+    <symbol id="hamburger-menu" viewBox="0 0 18 18">
+        <g clip-path="url(#clip0_378_9)">
+            <path d="M17.1 15.3H0.9C0.403206 15.3 0 15.7032 0 16.2C0 16.6968 0.403206 17.1 0.9 17.1H17.1C17.5968 17.1 18 16.6968 18 16.1999C18 15.7032 17.5968 15.3 17.1 15.3ZM0.9 2.69996H17.1C17.5968 2.69996 18 2.29679 18 1.79996C18 1.30314 17.5968 0.899963 17.1 0.899963H0.9C0.403206 0.899993 0 1.30317 0 1.79999C0 2.29679 0.403206 2.69996 0.9 2.69996ZM17.1 8.09996H0.9C0.403206 8.09996 0 8.50317 0 8.99999C0 9.49682 0.403206 9.89999 0.9 9.89999H17.1C17.5968 9.89999 18 9.49679 18 8.99999C18 8.5032 17.5968 8.09996 17.1 8.09996Z"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_378_9">
+                <rect width="18" height="18"/>
+            </clipPath>
+        </defs>
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 26 26">
+        <path d="M 21.734375 19.640625 L 19.636719 21.734375 C 19.253906 22.121094 18.628906 22.121094 18.242188 21.734375 L 13 16.496094 L 7.761719 21.734375 C 7.375 22.121094 6.746094 22.121094 6.363281 21.734375 L 4.265625 19.640625 C 3.878906 19.253906 3.878906 18.628906 4.265625 18.242188 L 9.503906 13 L 4.265625 7.761719 C 3.882813 7.371094 3.882813 6.742188 4.265625 6.363281 L 6.363281 4.265625 C 6.746094 3.878906 7.375 3.878906 7.761719 4.265625 L 13 9.507813 L 18.242188 4.265625 C 18.628906 3.878906 19.257813 3.878906 19.636719 4.265625 L 21.734375 6.359375 C 22.121094 6.746094 22.121094 7.375 21.738281 7.761719 L 16.496094 13 L 21.734375 18.242188 C 22.121094 18.628906 22.121094 19.253906 21.734375 19.640625 Z"/>
+    </symbol>
+
+    <symbol id="request-call" viewBox="0 0 76 76">
+        <path d="M7.09103 20.1547L38 2.3094L68.909 20.1547V55.8453L38 73.6906L7.09103 55.8453V20.1547Z" stroke="#FFB100" stroke-width="4"/>
+        <path d="M47 29H29C27.3433 29 26 30.3433 26 32V44C26 45.6567 27.3433 47 29 47H47C48.6567 47 50 45.6567 50 44V32C50 30.3433 48.6567 29 47 29ZM47.75 30.5L38 38L28.25 30.5H47.75ZM27.5 44V32L34.25 37.25L27.5713 44.4335C27.5293 44.2955 27.5 44.1523 27.5 44ZM28.6662 45.4602L35.435 38.2482L38 40.1862L40.4547 38.2355L47.3338 45.4595C47.2258 45.4843 28.7742 45.4843 28.6662 45.4602ZM48.4288 44.4342L41.75 37.25L48.5 32V44C48.5 44.1523 48.4707 44.2955 48.4288 44.4342Z" fill="#FFB100"/>
+    </symbol>
+
+    <symbol id="left-slider-arrow" viewBox="0 0 64 64">
+        <path d="M5.28719 16.5774L32 1.1547L58.7128 16.5774V47.4226L32 62.8453L5.28719 47.4226V16.5774Z" stroke="white" stroke-width="2"/>
+        <path d="M26.3982 31.3657L36.4065 22.2451C36.7349 21.9183 37.2675 21.9183 37.596 22.2451C37.9244 22.5718 37.9244 23.1019 37.596 23.4287L28.1911 32L37.5951 40.5713C37.9236 40.898 37.9236 41.4282 37.5951 41.7549C37.2667 42.0817 36.7341 42.0817 36.4057 41.7549L26.3974 32.6343C26.2223 32.4601 26.1473 32.2292 26.159 32.0008C26.1481 31.7716 26.2231 31.5407 26.3982 31.3657Z" fill="white"/>
+    </symbol>
+
+    <symbol id="right-slider-arrow" viewBox="0 0 64 64">
+        <path d="M5.28719 16.5774L32 1.1547L58.7128 16.5774V47.4226L32 62.8453L5.28719 47.4226V16.5774Z" stroke="white" stroke-width="2"/>
+        <path d="M37.6018 31.3657L27.5935 22.2451C27.2651 21.9183 26.7325 21.9183 26.404 22.2451C26.0756 22.5718 26.0756 23.1019 26.404 23.4287L35.8089 32L26.4049 40.5713C26.0764 40.898 26.0764 41.4282 26.4049 41.7549C26.7333 42.0817 27.2659 42.0817 27.5943 41.7549L37.6026 32.6343C37.7777 32.4601 37.8527 32.2292 37.841 32.0008C37.8519 31.7716 37.7769 31.5407 37.6018 31.3657Z" fill="white"/>
+    </symbol>
+</svg>
+
+<header class="header">
+    <div class="container header__container">
+        <a class="header__logo" href="/">
+            <img class="header__logo-image" src="asset/image/logo.png" alt="logo">
+
+            <span class="header__logo-text">
+                Объединенная металлоломная компания
+            </span>
+        </a>
+
+        <div class="header__contact">
+            <a class="header__contact-phone" href="tel:89051717782">8 905 171-77-82</a>
+
+            <span class="header__contact-text">Отдел заготовки лома цветных металлов</span>
+        </div>
+
+        <div class="header__contact">
+            <a class="header__contact-phone" href="tel:89051713244">8 905 171-32-44</a>
+
+            <span class="header__contact-text">Отдел заготовки лома черных металлов</span>
+        </div>
+
+        <div class="header__contact">
+            <span class="header__contact-text">308012 г. Белгород, ул. Костюкова 46 "Б" офис 313</span>
+        </div>
+
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item current">
+                    <a class="header__menu-link" href="/">Главная</a>
+                </li>
+
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="/">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a class="header__aside-menu-open-btn js-header-aside-menu-open-btn">
+            <svg>
+                <use xlink:href="#hamburger-menu"></use>
+            </svg>
+        </a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero__container">
+        <div class="hero__slider js-hero-slider">
+            <div class="hero__slider-wrapper wrapper">
+                <div class="hero__slide slide">
+                    <img src="asset/image/slide/slide-1.jpg" alt="slide">
+
+
+                    <div class="hero__slide-text">
+                        <h3 class="hero__slide-title">Заготовка лома черных металлов</h3>
+
+                        <span class="hero__slide-subtitle">
+                            Специализация заготовка переработка реализация лома и отходов черных металлов
+                        </span>
+                    </div>
+                </div>
+
+                <div class="hero__slide slide">
+                    <img src="asset/image/slide/slide-2.jpg" alt="slide">
+
+                    <div class="hero__slide-text">
+                        <h3 class="hero__slide-title">Заготовка лома цветных металлов</h3>
+
+                        <span class="hero__slide-subtitle">
+                            Специализация заготовка переработка реализация лома и отходов черных металлов
+                        </span>
+                    </div>
+                </div>
+
+                <div class="hero__slide slide">
+                    <img src="asset/image/slide/slide-3.jpg" alt="slide">
+
+
+                    <div class="hero__slide-text">
+                        <h3 class="hero__slide-title">Заготовка отработанных аккумуляторных батарей</h3>
+                    </div>
+                </div>
+
+                <a class="hero__request-call" href="#contact-form">
+                    <svg>
+                        <use xlink:href="#request-call"></use>
+                    </svg>
+
+                    <span>Обратиться к нам</span>
+                </a>
+            </div>
+
+            <div class="hero__slider-navigation">
+                <div class="hero__button-prev button-prev">
+                    <svg>
+                        <use xlink:href="#left-slider-arrow"></use>
+                    </svg>
+                </div>
+
+                <div class="hero__button-next button-next">
+                    <svg>
+                        <use xlink:href="#right-slider-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-form" class="contact-form">
+    <div class="container contact-form__container">
+        <img class="contact-form__image" src="asset/image/contact-form.png" alt="contact-form">
+
+        <div class="contact-form__form-wrapper">
+            <form class="contact-form__form">
+                <h2 class="contact-form__title">Форма обратной связи</h2>
+
+                <input class="contact-form__field" type="text" name="name" placeholder="Ваше имя">
+
+                <input class="contact-form__field" type="tel" name="phone" placeholder="Телефон">
+
+                <input id="contact-form-checkbox" class="hidden" type="checkbox" checked>
+                <label for="contact-form-checkbox" class="contact-form__privacy-policy">
+                    <div class="contact-form__checkbox"></div>
+
+                    <span>Согласен(а) с обработкой персональных данных</span>
+                </label>
+
+                <button class="contact-form__btn" type="submit">Обратиться к нам</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__column">
+            Copyright © 2022 Объединенная металлоломная компания
+        </div>
+
+        <div class="footer__column">
+            <a href="#">
+                Политика конфиденциальности
+            </a>
+        </div>
+
+        <div class="footer__column">
+            <span>Продвижение сайтов</span>
+
+            <a class="footer__dev" href="#">
+                <img src="asset/image/footer-logo.png" alt="footer-logo">
+
+                <span>webstyle</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="overlay js-page-overlay"></div>
+
+    <aside class="header-aside-menu js-header-aside-menu-body">
+        <div class="container header-aside-menu__container">
+            <a class="header-aside-menu__close js-header-aside-menu-close-btn">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </a>
+
+            <div class="header-aside-menu__title">
+                Menu
+            </div>
+
+            <div class="header-aside-menu__contact">
+                <a class="header-aside-menu__contact-phone" href="tel:89051717782">8 905 171-77-82</a>
+
+                <span class="header-aside-menu__contact-text">Отдел заготовки лома цветных металлов</span>
+            </div>
+
+            <div class="header-aside-menu__contact">
+                <a class="header-aside-menu__contact-phone" href="tel:89051713244">8 905 171-32-44</a>
+
+                <span class="header-aside-menu__contact-text">Отдел заготовки лома черных металлов</span>
+            </div>
+
+            <div class="header-aside-menu__contact">
+                <span class="header-aside-menu__contact-text">308012 г. Белгород, ул. Костюкова 46 "Б" офис 313</span>
+            </div>
+
+            <nav class="header-aside-menu__menu">
+                <ul class="header-aside-menu__menu-list">
+                    <li class="header-aside-menu__menu-item current">
+                        <a class="header-aside-menu__menu-link" href="/">Главная</a>
+                    </li>
+
+                    <li class="header-aside-menu__menu-item">
+                        <a class="header-aside-menu__menu-link" href="/">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <script src="asset/js/main.min.js"></script>
+    <script src="asset/js/swiper-bundle.min.js"></script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+//Переменные
+@import '_vars';
+
+//Сброс
+@import '_reset';
+
+//Шрифты
+@import '_fonts';
+
+//Общие
+@import '_common';
+
+//Header
+@import 'block/header/_header';
+@import 'block/header/_header-aside-menu';
+
+//Hero
+@import 'block/_hero';
+
+//Contact form
+@import 'block/_contact-form';
+
+//Footer
+@import 'block/_footer';
